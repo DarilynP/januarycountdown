@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>January Sprint — Countdown + Points</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="hero card">
+        <div class="hero__left">
+          <p class="eyebrow">January Sprint</p>
+
+          <h1 class="title">
+            ⏳ <span id="countdownLabel">—</span>
+          </h1>
+
+          <p class="subtitle">
+            Make them count. Finish tasks, earn points, build momentum.
+          </p>
+
+          <p class="chip" id="todayChip">—</p>
+
+          <div class="progress">
+            <div class="progress__bar" id="progressBar" style="width: 0%"></div>
+          </div>
+
+          <p class="meta">
+            Completed: <span id="completedCount">0</span>/<span id="totalCount"
+              >0</span
+            >
+          </p>
+        </div>
+
+        <div class="hero__right">
+          <div class="points" id="pointsPill">
+            <span class="points__icon">⭐</span>
+            <div class="points__text">
+              <p class="points__label">Points</p>
+              <p class="points__value" id="pointsValue">0</p>
+            </div>
+          </div>
+
+          <p class="tiny" id="countdownDetail">—</p>
+        </div>
+      </header>
+
+      <section class="card">
+        <div class="add">
+          <input
+            id="taskInput"
+            class="input"
+            type="text"
+            placeholder="Add a task (e.g., Ship portfolio update)"
+            maxlength="80"
+          />
+
+          <select id="pointsSelect" class="select" aria-label="Select points">
+            <option value="10">+10 (small)</option>
+            <option value="20" selected>+20 (medium)</option>
+            <option value="30">+30 (big)</option>
+          </select>
+
+          <button id="addBtn" class="btn btn--primary">Add</button>
+        </div>
+
+        <ul id="taskList" class="list" aria-label="Task list"></ul>
+
+        <div class="actions">
+          <button id="clearCompletedBtn" class="btn btn--ghost">
+            Clear completed
+          </button>
+          <button id="resetBtn" class="btn btn--danger">Reset January</button>
+        </div>
+      </section>
+
+      <p class="footer">Tip: Keep 3–7 tasks max. Momentum beats overwhelm.</p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
